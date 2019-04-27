@@ -107,7 +107,7 @@ files.forEach(entry => {
 
 console.log('Installing dependencies');
 child.execSync(
-  'npm install -S @babel/polyfillhtml-react-parser express nodemon react-helmet react-router-dom react react-dom prop-types npm-run-all cross-env'
+  'npm install -S @babel/polyfill html-react-parser express nodemon react-helmet react-router-dom react react-dom prop-types npm-run-all cross-env'
 );
 if(argv['with-emotion']) {
   child.execSync('npm install -S @emotion/core')
