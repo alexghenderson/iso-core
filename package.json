@@ -1,6 +1,6 @@
 {
   "name": "@alexghenderson/iso-core",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Isomorphic react app initializer",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,6 @@
   "author": "Alex Henderson",
   "license": "MIT",
   "bin": {
-    "core-webpack": "./node_modules/.bin/webpack",
     "core-setup": "./bin/setup.js"
   },
   "dependencies": {
