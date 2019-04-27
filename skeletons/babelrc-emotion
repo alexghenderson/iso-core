@@ -1,0 +1,6 @@
+{
+  "presets": [
+    "@alexghenderson/core/babel",
+    "@alexghenderson/core/babel/emotion"
+  ]
+}

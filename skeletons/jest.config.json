@@ -1,0 +1,4 @@
+{
+  "preset": "@alexghenderson/core/jest",
+  "rootDir": ".."
+}
