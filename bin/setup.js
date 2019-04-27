@@ -113,5 +113,5 @@ if(argv['with-emotion']) {
   child.execSync('npm install -S @emotion/core')
 }
 child.execSync('npm install -D rimraf semistandard');
-child.execSync('npm install -S @alexghenderson/core');
+child.execSync('npm install -S @alexghenderson/iso-core');
 console.log('Done!');
