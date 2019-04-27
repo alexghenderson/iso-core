@@ -107,10 +107,10 @@ files.forEach(entry => {
 
 console.log('Installing dependencies');
 child.execSync(
-  'npm install -S @babel/polyfill webpack webpack-cli html-react-parser express nodemon react-helmet react-router-dom react react-dom prop-types npm-run-all cross-env'
+  'npm install -S @babel/polyfillhtml-react-parser express nodemon react-helmet react-router-dom react react-dom prop-types npm-run-all cross-env'
 );
 if(argv['with-emotion']) {
   child.execSync('npm install -S @emotion/core')
 }
-child.execSync('npm install -D rimraf semistandard');
+child.execSync('npm install -D webpack webpack-cli @alexghenderson/iso-core rimraf semistandard');
 console.log('Done!');
