@@ -1,5 +1,5 @@
 {
   "presets": [
-    "@alexghenderson/core/babel"
+    "@alexghenderson/iso-core/babel"
   ]
 }

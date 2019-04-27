@@ -1,3 +1,3 @@
-const config = require('@alexghenderson/core/webpack/client');
+const config = require('@alexghenderson/iso-core/webpack/client');
 
 module.exports = config()
