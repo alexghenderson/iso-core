@@ -36,14 +36,14 @@ jobs:
         command: npx semantic-release
 workflows:
   version: 2
-    test-deploy:
-      jobs:
-        - test
-        - deploy:
-          requires:
-            - test
-          filters:
-            tags:
-              only: /^v.*/
-            branches:
-              only: /^release$/
+  test-deploy:
+    jobs:
+      - test
+      - deploy:
+        requires:
+          - test
+        filters:
+          tags:
+            only: /^v.*/
+          branches:
+            only: /^release$/
