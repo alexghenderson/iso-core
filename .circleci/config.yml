@@ -11,39 +11,39 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-        keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
 
       - run: npm ci
       - run: 
-        name: Run Tests
-        command: npm test
+          name: Run Tests
+          command: npm test
       - save_cache:
-        paths:
-          - node_modules
-        key: v1-dependencies-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
       - persist_to_workspace:
-        root: ~/repo
-        paths: .
-  deploy:
+          root: ~/repo
+          paths: .
+  release:
     <<: *defaults 
     steps:
       - attach_workspace:
-        at: ~/repo
+          at: ~/repo
       - run:
-        name: Semantic Release
-        command: npx semantic-release
+          name: Semantic Release
+          command: npx semantic-release
 workflows:
   version: 2
-  test-deploy:
+  test_deploy:
     jobs:
       - test
-      - deploy:
-        requires:
-          - test
-        filters:
-          tags:
-            only: /^v.*/
-          branches:
-            only: /^release$/
+      - release:
+          requires:
+            - test
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              only: /^release$/
