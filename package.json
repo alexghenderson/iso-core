@@ -33,5 +33,9 @@
   },
   "devDependencies": {
     "semantic-release": "^15.13.3"
+  },
+  "release": {
+    "branch": "release",
+    "plugins": ["@semantic-release/npm", "@semantic-release/github"]
   }
 }
