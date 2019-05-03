@@ -4,7 +4,7 @@
   "description": "Isomorphic react app initializer",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Notice: no test specified\""
   },
   "author": "Alex Henderson",
   "license": "MIT",
@@ -30,5 +30,8 @@
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.1",
     "yargs": "^13.2.2"
+  },
+  "devDependencies": {
+    "semantic-release": "^15.13.3"
   }
 }
