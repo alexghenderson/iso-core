@@ -33,7 +33,7 @@ jobs:
           at: ~/repo
       - run:
           name: Semantic Release
-          command: npx semantic-release
+          command: NPM_TOKEN=${NPM_TOKEN} GH_TOKEN=${GH_TOKEN} npx semantic-release
 workflows:
   version: 2
   test_deploy:
