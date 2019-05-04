@@ -47,4 +47,4 @@ workflows:
             tags:
               only: /^v.*/
             branches:
-              only: /^release$/
+              only: /^master$/
